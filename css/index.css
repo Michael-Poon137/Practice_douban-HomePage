@@ -1,1 +1,65 @@
 @import "reset.css";
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.logo {
+    background-color: #EDF4EC;
+    margin-bottom: 30px;
+}
+
+.nav .container {
+    margin-bottom: 25px;
+}
+
+.nav .container .content {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.nav .container .content .left {
+    float: left;
+    height: 30px;
+    margin: 4px 0;
+}
+
+.nav .container .content .right {
+    float: right;
+}
+
+.nav .container .content .left .site-name,
+.nav .container .content .left .search-bar {
+    display: inline-block;
+    height: 19px;
+}
+
+.nav .container .content .left .site-name {
+    margin-right: 24px;
+}
+
+.nav .container .content .left .site-name img {
+    display: block;
+    height: 24px;
+    width: 73px;
+}
+
+.nav .container .content .left .search-bar input {
+    padding: 5px;
+}
+
+.nav .container .content .right ul {
+    height: 35px;
+    line-height: 35px;
+}
+
+.nav .container .content .right ul li {
+    display: inline-block;
+    padding: 0 2px;
+}
+
+.next {
+    background-color: blue;
+}

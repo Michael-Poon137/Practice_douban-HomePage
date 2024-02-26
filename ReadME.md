@@ -1,5 +1,7 @@
 # 实战项目 - 豆瓣首页 <br> Practical projects - Douban homepage
 
+## 项目详情 Project Description
+
 > 这个项目只是模拟做出豆瓣首页的架构和设计。<br/>
 This project is just a simulation of the architecture and design of Douban’s homepage.
 
