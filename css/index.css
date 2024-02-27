@@ -6,17 +6,36 @@
     clear: both;
 }
 
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* 菜单 Navigation*/
+
 .logo {
-    background-color: #EDF4EC;
+    height: 34px;
     margin-bottom: 30px;
+    background-color: #EDF4EC;
+}
+
+.logo a img {
+    float: left;
+    width: 102px;
+    height: 20px;
+    margin: 7px 13px;
+}
+
+.logo h1 {
+    display: none;
 }
 
 .nav .container {
+    height: 32px;
     margin-bottom: 25px;
 }
 
 .nav .container .content {
-    width: 800px;
+    width: 1080px;
     margin: 0 auto;
 }
 
@@ -46,8 +65,36 @@
     width: 73px;
 }
 
+.nav .container .content .left .search-bar {
+    position: relative;
+}
+
+.nav .container .content .left .search-bar div {
+    border: 1px solid #c3c3c3;
+    width: 270px;
+    height: 30px;
+    line-height: 30px;
+}
+
 .nav .container .content .left .search-bar input {
     padding: 5px;
+    border: 0;
+}
+
+.nav .container .content .left .search-bar .search-submit {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 1px;
+    right: 1px;;
+}
+
+input[type="text"] {
+    width: 240px;
+}
+
+input[type="text"]::placeholder {
+    color: #c3c3c3;
 }
 
 .nav .container .content .right ul {
@@ -57,9 +104,126 @@
 
 .nav .container .content .right ul li {
     display: inline-block;
-    padding: 0 2px;
+    /* padding: 0 2px; */
+    margin-right: 14px;
 }
 
-.next {
-    background-color: blue;
+.nav .container .content .right ul li a {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
 }
+
+.nav .container .content .right ul li a .book {
+    color: #5c452d;
+}
+
+.nav .container .content .right ul li a .movie {
+    color: #278dce;
+}
+
+.nav .container .content .right ul li a .music {
+    color: #f37f00;
+}
+
+.nav .container .content .right ul li a .same-city {
+    color: #e85408;
+}
+
+.nav .container .content .right ul li a .group {
+    color: #0f959d;
+}
+
+.nav .container .content .right ul li a .read {
+    color: #389eac;
+}
+
+.nav .container .content .right ul li a .fm {
+    color: #9bd6c5;
+}
+
+.nav .container .content .right ul li a .time {
+    color: #4c4c4c;
+    position: relative;
+}
+
+.nav .container .content .right ul li a .time::after {
+    content: "";
+    position: absolute;
+    width: 1.5px;
+    height: 1.5px;
+    background-color: #fff;
+    border: 2px solid red;
+    border-radius: 50%;
+    top: 1px;
+    right: 12px;
+}
+
+.nav .container .content .right ul li a .shop {
+    color: #44883e;
+}
+
+/* 登入区域 Login Section*/
+
+.login-background {
+    height: 304px;
+    background-image: url(../img/login_background.jpg);
+    background-size: contain;
+    background-color: #f0f4ec;
+    background-repeat: no-repeat;
+    background-position: 110px;
+    margin-bottom: 25px;
+}
+
+.login-background .login-container {
+    width: 950px;
+    height: 304px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid black;
+}
+
+.login-background .login-container .install-app {
+    position: absolute;
+    height: 120px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0 auto 475px;
+}
+
+.login-background .login-container .install-app h2 {
+    font-size: 25px;
+    margin: 7px 0;
+}
+
+.login-background .login-container .install-app .download-method {
+    margin-top: 25px;
+}
+
+.login-background .login-container .install-app .download-method a {
+    padding: 9px 21px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #00B51D;
+    border-radius: 2px;
+    vertical-align: super;
+}
+
+.login-background .login-container .install-app .download-method .qr-link {
+    display: inline-block;
+    position: relative;
+}
+
+.login-background .login-container .install-app .download-method .qr-link img {
+    display: inline-block;
+    width: 28px;
+    aspect-ratio: auto 28 / 28;
+    height: 28px;
+    vertical-align: sub;
+    border: 1px solid #48aa0d;
+    border-radius: 2px;
+}
+
+/* .login-background .login-container .login-section {
+    border: 1px solid black;
+} */
