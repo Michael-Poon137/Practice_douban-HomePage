@@ -49,3 +49,7 @@ table {
 a {
 	text-decoration: none;
 }
+
+:focus-visible {
+	outline: 0;
+}

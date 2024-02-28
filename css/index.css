@@ -86,7 +86,8 @@ body {
     width: 30px;
     height: 30px;
     top: 1px;
-    right: 1px;;
+    right: 1px;
+    ;
 }
 
 input[type="text"] {
@@ -180,7 +181,6 @@ input[type="text"]::placeholder {
     height: 304px;
     margin: 0 auto;
     position: relative;
-    border: 1px solid black;
 }
 
 .login-background .login-container .install-app {
@@ -191,16 +191,16 @@ input[type="text"]::placeholder {
     margin: auto 0 auto 475px;
 }
 
-.login-background .login-container .install-app h2 {
+.install-app h2 {
     font-size: 25px;
     margin: 7px 0;
 }
 
-.login-background .login-container .install-app .download-method {
+.install-app .download-method {
     margin-top: 25px;
 }
 
-.login-background .login-container .install-app .download-method a {
+.install-app .download-method a {
     padding: 9px 21px;
     font-size: 12px;
     color: #fff;
@@ -209,12 +209,26 @@ input[type="text"]::placeholder {
     vertical-align: super;
 }
 
-.login-background .login-container .install-app .download-method .qr-link {
+.install-app .download-method .qr-link {
     display: inline-block;
+    vertical-align: sub;
     position: relative;
+    width: 28px;
+    height: 28px;
 }
 
-.login-background .login-container .install-app .download-method .qr-link img {
+.login-background .login-container .install-app .download-method .qr-link .qr {
+    vertical-align: sub;
+    border: 1px solid #48aa0d;
+    border-radius: 2px;
+    background-image: url(../img/icon_qrcode_green.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: inherit;
+    height: inherit;
+}
+
+/* .login-background .login-container .install-app .download-method .qr-link img {
     display: inline-block;
     width: 28px;
     aspect-ratio: auto 28 / 28;
@@ -222,8 +236,241 @@ input[type="text"]::placeholder {
     vertical-align: sub;
     border: 1px solid #48aa0d;
     border-radius: 2px;
+} */
+
+/* .login-background .login-container .install-app .download-method .qr-link .qr img {
+    display: none;
 }
 
-/* .login-background .login-container .login-section {
-    border: 1px solid black;
+.login-background .login-container .install-app .download-method .qr-link .qr img:hover {
+    display: block;
+    position: absolute;
+    border: none;
+    background-image: url();
+    width: 160px;
+    height: 160px;
 } */
+
+.login-background .login-container .login-section {
+    float: right;
+    position: relative;
+    width: 280px;
+    height: 264px;
+    overflow: hidden;
+    padding: 30px 10px 10px;
+}
+
+.login-section .login-normal {
+    height: inherit;
+}
+
+.login-section .login-type {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 100%;
+}
+
+.login-section .login-type a {
+    position: absolute;
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+}
+
+.login-section .login-type a.active {
+    display: inline;
+}
+
+.login-section .login-type .qr {
+    background-image: url(../img/topright_loginQR.png);
+    display: none;
+}
+
+.login-section .login-type .norm {
+    background-image: url(../img/topright_loginNorm.png);
+    display: none;
+}
+
+
+
+.login-section .login-normal .title {
+    margin-bottom: 10px;
+}
+
+.login-section .login-normal .title ul {
+    text-align: center;
+    border-bottom: 1px solid #ececec;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.login-section .login-normal .title ul li {
+    display: inline-block;
+    text-align: center;
+    width: 49%;
+    line-height: 2;
+    cursor: pointer;
+}
+
+.login-section .login-normal .title ul li.active {
+    border-bottom: 1px solid #494949;
+    font-weight: 600;
+    color: #333;
+}
+
+.login-section .login-normal .sms-details {
+    height: 229px;
+}
+
+.sms-details .form .policy {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #9b9b9b;
+}
+
+.sms-details .form .policy a {
+    color: #41ac52;
+}
+
+.sms-details .form .phone-input {
+    margin-bottom: 10px;
+    height: 32.8px;
+    width: 280px;
+    position: relative;
+}
+
+.sms-details .form .phone-input::after {
+    content: "";
+    position: absolute;
+    border-left: 1px solid #dfdfdf;
+    height: 22px;
+    top: 6px;
+    left: 46px;
+}
+
+.sms-details .form .phone-input .prefix,
+.sms-details .form .phone-input input {
+    float: left;
+    padding: 8px 0;
+    border: 1px solid #e4e6e5;
+    border-radius: 3px;
+}
+
+.sms-details .form .phone-input .prefix {
+    cursor: pointer;
+    background-color: #fff;
+    font-weight: 700;
+    height: 16px;
+    width: 50px;
+    text-align: center;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.sms-details .form .phone-input input {
+    border-left: none;
+    width: 226px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-left: 2px;
+}
+
+.sms-details .form .sms-verify {
+    margin-bottom: 10px;
+    height: 32.8px;
+    width: 280px;
+    position: relative;
+}
+
+.sms-details .form .sms-verify input {
+    padding: 8px 10px;
+    width: 280px;
+    border-radius: 3px;
+    border: 1px solid #e4e6e5;
+    box-sizing: border-box;
+}
+
+.sms-details .form .sms-verify .get-code {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto 0;
+    padding: 10px 0;
+    font-size: 13px;
+}
+
+.sms-details .form .sms-verify .get-code a {
+    color: #41ac52;
+}
+
+.sms-details .form .sms-button {
+    text-align: center;
+}
+
+.sms-details .form .sms-button .code-link {
+    display: block;
+    padding: 9px 21px;
+    font-size: 15px;
+    color: #fff;
+    background-color: rgba(66, 189, 86, .5);
+    border-radius: 2px;
+}
+
+.sms-details .form .sms-button .code-link.active {
+    background-color: #00B51D;
+}
+
+.sms-details .cannot-receive-container {
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.sms-details .cannot-receive-container .cannot-receive {
+    margin: 10px 0;
+    height: 21px;
+    float: right;
+}
+
+.sms-details .cannot-receive a {
+    color: #41ac52;
+    font-size: 13px;
+}
+
+.sms-details .other-party div,
+.sms-details .other-party a {
+    display: inline-block;
+}
+
+.sms-details .other-party .other-party-title {
+    color: #9b9b9b;
+    font-size: 11px;
+    text-align: center;
+    vertical-align: super;
+}
+
+.sms-details .other-party .other-party-link {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.sms-details .other-party .other-party-link .wechat,
+.sms-details .other-party .other-party-link .weibo {
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-left: 12px;
+}
+
+.sms-details .other-party .other-party-link .wechat {
+    background-image: url(../img/wechat_logo.svg);
+}
+
+.sms-details .other-party .other-party-link .weibo {
+    background-image: url(../img/weibo_logo.svg);
+}
