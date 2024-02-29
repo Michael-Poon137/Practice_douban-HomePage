@@ -260,8 +260,15 @@ input[type="text"]::placeholder {
     padding: 30px 10px 10px;
 }
 
-.login-section .login-normal {
+.login-section .login-normal,
+.login-section .scan-qr-login {
     height: inherit;
+    display: none;
+}
+
+.login-section .login-normal.active,
+.login-section .scan-qr-login.active {
+    display: block;
 }
 
 .login-section .login-type {
@@ -296,7 +303,8 @@ input[type="text"]::placeholder {
 
 
 
-.login-section .login-normal .title {
+.login-section .login-normal .title,
+.login-section .scan-qr-login .title {
     margin-bottom: 10px;
 }
 
@@ -321,8 +329,14 @@ input[type="text"]::placeholder {
     color: #333;
 }
 
-.login-section .login-normal .sms-details {
-    height: 229px;
+.login-section .login-normal .sms-details,
+.login-section .login-normal .password-details {
+    display: none;
+}
+
+.login-section .login-normal .sms-details.active,
+.login-section .login-normal .password-details.active{
+    display: block;
 }
 
 .sms-details .form .policy {
@@ -331,7 +345,8 @@ input[type="text"]::placeholder {
     color: #9b9b9b;
 }
 
-.sms-details .form .policy a {
+.sms-details .form .policy a,
+.password-details .form .find-password a {
     color: #41ac52;
 }
 
@@ -408,11 +423,13 @@ input[type="text"]::placeholder {
     color: #41ac52;
 }
 
-.sms-details .form .sms-button {
+.sms-details .form .sms-button,
+.password-details .form .password-button {
     text-align: center;
 }
 
-.sms-details .form .sms-button .code-link {
+.sms-details .form .sms-button .code-link,
+.password-details .form .password-button .code-link {
     display: block;
     padding: 9px 21px;
     font-size: 15px;
@@ -421,45 +438,49 @@ input[type="text"]::placeholder {
     border-radius: 2px;
 }
 
-.sms-details .form .sms-button .code-link.active {
+.sms-details .form .sms-button .code-link.active,
+.password-details .form .password-button .code-link.active {
     background-color: #00B51D;
 }
 
-.sms-details .cannot-receive-container {
+.sms-details .cannot-receive-container,
+.password-details .oversea-phone-container {
     border-bottom: 1px solid #ddd;
     box-sizing: border-box;
 }
 
-.sms-details .cannot-receive-container .cannot-receive {
+.sms-details .cannot-receive-container .cannot-receive,
+.password-details .oversea-phone-container .oversea-phone {
     margin: 10px 0;
     height: 21px;
     float: right;
 }
 
-.sms-details .cannot-receive a {
+.sms-details .cannot-receive a,
+.password-details .oversea-phone a {
     color: #41ac52;
     font-size: 13px;
 }
 
-.sms-details .other-party div,
-.sms-details .other-party a {
+.login-normal .other-party div,
+.login-normal .other-party a {
     display: inline-block;
 }
 
-.sms-details .other-party .other-party-title {
+.login-normal .other-party .other-party-title {
     color: #9b9b9b;
     font-size: 11px;
     text-align: center;
     vertical-align: super;
 }
 
-.sms-details .other-party .other-party-link {
+.login-normal .other-party .other-party-link {
     padding-top: 10px;
     text-align: center;
 }
 
-.sms-details .other-party .other-party-link .wechat,
-.sms-details .other-party .other-party-link .weibo {
+.login-normal .other-party .other-party-link .wechat,
+.login-normal .other-party .other-party-link .weibo {
     width: 22px;
     height: 22px;
     background-repeat: no-repeat;
@@ -467,10 +488,80 @@ input[type="text"]::placeholder {
     margin-left: 12px;
 }
 
-.sms-details .other-party .other-party-link .wechat {
+.login-normal .other-party .other-party-link .wechat {
     background-image: url(../img/wechat_logo.svg);
 }
 
-.sms-details .other-party .other-party-link .weibo {
+.login-normal .other-party .other-party-link .weibo {
     background-image: url(../img/weibo_logo.svg);
+}
+
+.password-details .form .find-password {
+    font-size: 12px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.password-details .form .account,
+.password-details .form .password-verify {
+    margin-bottom: 10px;
+    height: 32.8px;
+    width: 280px;
+}
+
+.password-details .form .account input,
+.password-details .form .password-verify input {
+    width: inherit;
+    height: inherit;
+    padding: 8px 10px;
+    border: 1px solid #e4e6e5;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.login-section .scan-qr-login .title {
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom: 1px solid #ececec;
+    cursor: pointer;
+}
+
+.login-section .scan-qr-login .title p {
+    display: inline-block;
+    color: #333;
+    font-weight: 600;
+    text-align: left;
+    line-height: 2;
+}
+
+.scan-qr-login .qr-code {
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.scan-qr-login .qr-code .qr-image {
+    height: 170px;
+    width: 170px;
+    display: inline-block;
+}
+
+.scan-qr-login .qr-code .qr-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.scan-qr-login .qr-code .qr-description {
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 10px;
+    padding: 3px 10px;
+    background-color: rgba(0, 0, 0, .08);
+    border-radius: 12px;
+    color: #494949;
+    line-height: 1.5;
+}
+
+.scan-qr-login .qr-code .qr-description a {
+     color: #41ac52;
 }
